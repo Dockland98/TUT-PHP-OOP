@@ -32,3 +32,19 @@ In this project, I aimed that making a trade journal which allows daytraders to 
 - [Kotlin](https://kotlinlang.org/)
 
 - [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
+  
+- [Kotlin Flow](https://https://kotlinlang.org/docs/flow.html)
+
+- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+  
+- [Repository](https://developer.android.com/topic/architecture/data-layer)
+
+- [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
+
+- [Glide](https://github.com/bumptech/glide)
+
+- [Firebase](https://firebase.google.com/)
+
+<div align="center">
+  <video src="https://user-images.githubusercontent.com/94565457/224035029-4daf4d2f-4dd3-4105-93de-f1a7d2b458e7.mp4" width=400/>
+<div/>
