@@ -10,4 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.sevban.tradejo
+        applicationId "com.sevban.tradejournal"
+        minSdk 24
+        targetSdk 32
+       
