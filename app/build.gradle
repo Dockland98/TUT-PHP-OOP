@@ -18,4 +18,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
-            u
+            useSupportLibrary true
+        }
+        signingConfig signingCon
