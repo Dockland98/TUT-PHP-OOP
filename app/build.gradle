@@ -20,4 +20,8 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
-        signingConfig signingCon
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
