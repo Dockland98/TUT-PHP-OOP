@@ -52,4 +52,5 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation "android
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.c
