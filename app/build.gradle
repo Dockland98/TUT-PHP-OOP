@@ -78,4 +78,4 @@ dependencies {
 
 
     // Coroutines
-    implementat
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-
