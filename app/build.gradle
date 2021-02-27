@@ -91,4 +91,5 @@ dependencies {
     implementation "io.coil-kt:coil-compose:2.1.0"
 
 
-    //D
+    //Dagger - Hilt
+    implementation "com.google.dagger:hil
