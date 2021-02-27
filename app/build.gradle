@@ -88,4 +88,7 @@ dependencies {
 
     // Coil //Image Download Library (supports Compose)
 
-    implementation "io
+    implementation "io.coil-kt:coil-compose:2.1.0"
+
+
+    //D
