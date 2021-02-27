@@ -92,4 +92,5 @@ dependencies {
 
 
     //Dagger - Hilt
-    implementation "com.google.dagger:hil
+    implementation "com.google.dagger:hilt-android:2.40.5"
+    kapt "com.googl
