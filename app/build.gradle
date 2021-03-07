@@ -108,4 +108,8 @@ dependencies {
     //Jetpack Datastore
 
     implementation("androidx.datastore:datastore-preferences:1.0.0")
-    implementat
+    implementation("androidx.datastore:datastore:1.0.0")
+
+    // Room
+
+ 
