@@ -114,4 +114,5 @@ dependencies {
 
     def room_version = "2.4.2"
 
-    implementation "android
+    implementation "androidx.room:room-runtime:$room_version"
+    annotat
