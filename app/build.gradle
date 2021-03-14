@@ -117,3 +117,5 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+    implementation "androidx.room:room-ktx:$room_ve
