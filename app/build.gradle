@@ -123,4 +123,4 @@ dependencies {
 
     //LiveData
 
-    implementation 'and
+    implementation 'androidx.compose.runtime:runtime-livedata:1.3.0-alpha01
