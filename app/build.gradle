@@ -119,4 +119,8 @@ dependencies {
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
 
     implementation "androidx.room:room-ktx:$room_version"
-    kapt "androidx.room:room-compiler:$room_v
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //LiveData
+
+    implementation 'and
