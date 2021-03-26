@@ -25,4 +25,6 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_plat
+          "other_platform_oauth_client": [
+            {
+              "client_i
