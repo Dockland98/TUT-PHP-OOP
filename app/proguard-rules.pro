@@ -11,3 +11,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# Uncomment this to preserve the line number info
