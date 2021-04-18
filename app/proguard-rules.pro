@@ -12,4 +12,6 @@
 #   public *;
 #}
 
-# Uncomment this to preserve the line number info
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattribut
