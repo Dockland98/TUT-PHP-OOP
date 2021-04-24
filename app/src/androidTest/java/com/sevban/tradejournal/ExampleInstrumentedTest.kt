@@ -18,4 +18,5 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = Instrumentatio
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        
