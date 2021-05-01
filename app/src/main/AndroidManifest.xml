@@ -3,4 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.sevban.tradejournal">
 
-    <uses-per
+    <uses-permission android:name="android.permission.INTERNET"></use
