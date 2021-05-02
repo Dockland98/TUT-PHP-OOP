@@ -8,4 +8,5 @@
     <application
         android:name=".TradeJournalApplication"
         android:allowBackup="true"
-        android:dataExtractionRules="@xm
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:ful
