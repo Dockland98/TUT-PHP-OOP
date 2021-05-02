@@ -9,4 +9,5 @@
         android:name=".TradeJournalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:ful
+        android:fullBackupContent="@xml/backup_rules"
+        android:i
