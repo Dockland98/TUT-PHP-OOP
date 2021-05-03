@@ -10,4 +10,5 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:i
+        android:icon="@drawable/trader"
+        android:label="@string/app_na
