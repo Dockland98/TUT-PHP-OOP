@@ -14,4 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/trader"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TradeJ
+        android:theme="@style/Theme.TradeJournal"
+        tools:targetApi="31">
+
+        <activity
