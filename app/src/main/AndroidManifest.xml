@@ -19,4 +19,5 @@
 
         <activity
             android:name=".view.MainActivity"
-  
+            android:exported="true"
+            android:
