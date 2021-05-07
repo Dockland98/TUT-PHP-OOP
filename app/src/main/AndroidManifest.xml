@@ -20,4 +20,6 @@
         <activity
             android:name=".view.MainActivity"
             android:exported="true"
-            android:
+            android:theme="@style/Theme.TradeJournal">
+
+            
