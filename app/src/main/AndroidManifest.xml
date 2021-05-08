@@ -28,4 +28,5 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="android.
+                <action android:name="android.intent.action.SEND" />
+                <category android:n
