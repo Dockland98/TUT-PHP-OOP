@@ -29,4 +29,5 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-                <category android:n
+                <category android:name="android.intent.category.DEFAULT" />
+           
