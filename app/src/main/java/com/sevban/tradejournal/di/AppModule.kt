@@ -20,3 +20,29 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Singleton
+    @Provides
+    fun injectPairDetailRepo(
+        auth: FirebaseAuth,
+        database: FirebaseFirestore
+    ) : PairDetailRepoInterface = PairDetailRepository(auth, database)
+
+    @Provides
+    @Singleton
+    fun injectProfileRepo(
+        //@Named("currentUserEmail") email: String,
+        @Named("pairCollection")pairCollection: CollectionReference,
+        @Named("usersCollection")usersCollectionReference: CollectionReference,
+        auth : FirebaseAuth
+    ) = ProfileRepository(usersCollectionReference, auth) as ProfileRepoInterface
+
+    @Provides
+    @Singleton
+    fun injectSignUpRepo(
+        auth: FirebaseAuth,
+        database: FirebaseFirestore
+    ) = SignUpRepository(auth, database) as SignUpRepoInterface
+
+
+}
