@@ -1,3 +1,4 @@
 package com.sevban.tradejournal
 
-imp
+import android.app.Application
+import dagger.hilt.android
