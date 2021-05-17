@@ -5,4 +5,5 @@ import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.comp
+import dagger.hilt.components.SingletonComponent
+import javax.inject.
