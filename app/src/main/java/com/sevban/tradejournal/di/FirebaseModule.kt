@@ -11,4 +11,5 @@ import javax.inject.Singleton
 
 
 @Module
-@Insta
+@InstallIn(SingletonComponent::class)
+object Firebase
