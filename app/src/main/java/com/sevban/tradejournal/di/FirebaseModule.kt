@@ -12,4 +12,8 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object Firebase
+object FirebaseModule {
+
+    @Provides
+    @Singleton
+    fun provideFireAut
