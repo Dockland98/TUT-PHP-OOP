@@ -22,4 +22,7 @@ object FirebaseModule {
     @Singleton
     fun provideFireDB()= FirebaseFirestore.getInstance()
 
-   
+    @Provides
+    @Singleton
+    @Named("pairCollection")
+  
