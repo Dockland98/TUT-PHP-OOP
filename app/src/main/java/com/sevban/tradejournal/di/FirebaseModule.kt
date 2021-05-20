@@ -16,4 +16,7 @@ object FirebaseModule {
 
     @Provides
     @Singleton
-    fun provideFireAut
+    fun provideFireAuth()= FirebaseAuth.getInstance()
+
+    @Provides
+    @Si
