@@ -26,4 +26,6 @@ object FirebaseModule {
     @Singleton
     @Named("pairCollection")
     fun providePairCollection(
-        database: Firebas
+        database: FirebaseFirestore,
+        auth : FirebaseAuth
+    ) =data
