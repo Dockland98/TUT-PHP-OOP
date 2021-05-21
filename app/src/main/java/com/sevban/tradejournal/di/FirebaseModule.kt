@@ -28,4 +28,5 @@ object FirebaseModule {
     fun providePairCollection(
         database: FirebaseFirestore,
         auth : FirebaseAuth
-    ) =data
+    ) =database.collection("Pairs")
+        .document(auth.cur
