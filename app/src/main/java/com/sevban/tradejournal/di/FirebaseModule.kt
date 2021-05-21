@@ -25,4 +25,5 @@ object FirebaseModule {
     @Provides
     @Singleton
     @Named("pairCollection")
-  
+    fun providePairCollection(
+        database: Firebas
