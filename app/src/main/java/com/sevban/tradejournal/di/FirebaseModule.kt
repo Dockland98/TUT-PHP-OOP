@@ -29,4 +29,7 @@ object FirebaseModule {
         database: FirebaseFirestore,
         auth : FirebaseAuth
     ) =database.collection("Pairs")
-        .document(auth.cur
+        .document(auth.currentUser?.email.toString())
+        .collection("Pair")
+
+    @Provide
