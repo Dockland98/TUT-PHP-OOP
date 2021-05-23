@@ -32,4 +32,7 @@ object FirebaseModule {
         .document(auth.currentUser?.email.toString())
         .collection("Pair")
 
-    @Provide
+    @Provides
+    @Singleton
+    @Named("usersCollection")
+    fun pro
