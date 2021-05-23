@@ -35,4 +35,6 @@ object FirebaseModule {
     @Provides
     @Singleton
     @Named("usersCollection")
-    fun provideUsersCollection(database: FirebaseFirestore) =database.co
+    fun provideUsersCollection(database: FirebaseFirestore) =database.collection("Users")
+
+}
