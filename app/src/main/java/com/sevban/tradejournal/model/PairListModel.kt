@@ -1,3 +1,6 @@
 package com.sevban.tradejournal.model
 
-import androidx.compose.ui.input.pointer.PointerI
+import androidx.compose.ui.input.pointer.PointerId
+
+data class PairListModel(
+    var c
