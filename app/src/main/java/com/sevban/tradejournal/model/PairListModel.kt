@@ -1,1 +1,3 @@
-package com.sevban.tradejournal.m
+package com.sevban.tradejournal.model
+
+import androidx.compose.ui.input.pointer.PointerI
