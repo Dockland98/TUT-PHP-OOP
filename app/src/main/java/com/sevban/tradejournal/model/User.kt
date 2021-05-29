@@ -7,4 +7,5 @@ data class User(
     var password: String="",
     var userName: String="",
     var id: String="",
-    var imag
+    var imageId: Int= R.drawable.trader
+)
