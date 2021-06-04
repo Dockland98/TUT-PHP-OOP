@@ -7,4 +7,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface PairDetailRepoInterface {
 
-    fun getProductListFromFirestore(currentPairId: String): Flow<Res
+    fun getProductListFromFirestore(currentPairId: String): Flow<Resource<ArrayList<AnalyzeModel>>>
+
+    //suspend fun getAnaly
