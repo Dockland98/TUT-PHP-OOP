@@ -7,4 +7,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface PairDetailRepoInterface {
 
-    fun ge
+    fun getProductListFromFirestore(currentPairId: String): Flow<Res
