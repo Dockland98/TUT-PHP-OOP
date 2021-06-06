@@ -11,4 +11,6 @@ interface PairDetailRepoInterface {
 
     //suspend fun getAnalysisListFromFirebase(analyzeList: MutableList<AnalyzeModel>, currentPairId: String)
 
-    suspend fun saveA
+    suspend fun saveAnalyze(data: AnalyzeModel, currentPairId: String)
+
+    s
