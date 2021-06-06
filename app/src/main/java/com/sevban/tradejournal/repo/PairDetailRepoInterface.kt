@@ -13,4 +13,5 @@ interface PairDetailRepoInterface {
 
     suspend fun saveAnalyze(data: AnalyzeModel, currentPairId: String)
 
-    s
+    suspend fun deleteFromFirebase(
+        analyze
