@@ -9,4 +9,6 @@ interface PairDetailRepoInterface {
 
     fun getProductListFromFirestore(currentPairId: String): Flow<Resource<ArrayList<AnalyzeModel>>>
 
-    //suspend fun getAnalysisListFromFirebase(analyzeList: MutableList<
+    //suspend fun getAnalysisListFromFirebase(analyzeList: MutableList<AnalyzeModel>, currentPairId: String)
+
+    suspend fun saveA
