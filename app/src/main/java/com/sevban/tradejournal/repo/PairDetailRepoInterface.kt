@@ -15,4 +15,7 @@ interface PairDetailRepoInterface {
 
     suspend fun deleteFromFirebase(
         analyze: AnalyzeModel,
-        analyzeList: ArrayList<AnalyzeModel>
+        analyzeList: ArrayList<AnalyzeModel>?,
+        pairId: String,
+        context: Context)
+}
