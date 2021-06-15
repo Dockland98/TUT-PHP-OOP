@@ -6,4 +6,5 @@ import com.sevban.tradejournal.model.PairListModel
 import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.util.Resource
 import kotlinx.coroutines.flow.Flow
-impo
+import kotlinx.coroutines.flow.MutableStateFlow
+imp
