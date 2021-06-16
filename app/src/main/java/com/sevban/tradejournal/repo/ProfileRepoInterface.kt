@@ -7,4 +7,6 @@ import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-imp
+import kotlinx.coroutines.flow.callbackFlow
+
+interface Prof
