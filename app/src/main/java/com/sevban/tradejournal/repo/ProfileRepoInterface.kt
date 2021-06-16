@@ -11,4 +11,6 @@ import kotlinx.coroutines.flow.callbackFlow
 
 interface ProfileRepoInterface {
 
-    suspend fun saveImageId(
+    suspend fun saveImageId(imageState: Int)
+
+    suspend fun getUserModel(modelState: 
