@@ -9,4 +9,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.callbackFlow
 
-interface Prof
+interface ProfileRepoInterface {
+
+    suspend fun saveImageId(
