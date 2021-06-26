@@ -13,4 +13,6 @@ interface ProfileRepoInterface {
 
     suspend fun saveImageId(imageState: Int)
 
-    suspend fun getUserModel(modelState: 
+    suspend fun getUserModel(modelState: MutableState<User>)
+
+    suspend fun addPair
