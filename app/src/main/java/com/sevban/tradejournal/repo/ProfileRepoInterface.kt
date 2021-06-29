@@ -15,4 +15,6 @@ interface ProfileRepoInterface {
 
     suspend fun getUserModel(modelState: MutableState<User>)
 
-    suspend fun addPair
+    suspend fun addPair(newPair: String)
+
+    suspend fun retrievePairsFromFir
