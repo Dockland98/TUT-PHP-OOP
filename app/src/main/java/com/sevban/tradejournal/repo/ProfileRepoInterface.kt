@@ -17,4 +17,6 @@ interface ProfileRepoInterface {
 
     suspend fun addPair(newPair: String)
 
-    suspend fun retrievePairsFromFir
+    suspend fun retrievePairsFromFirebase(pairState: MutableList<PairListModel>)
+
+    fun getPairL
