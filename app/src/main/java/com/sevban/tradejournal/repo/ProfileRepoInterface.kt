@@ -19,4 +19,4 @@ interface ProfileRepoInterface {
 
     suspend fun retrievePairsFromFirebase(pairState: MutableList<PairListModel>)
 
-    fun getPairL
+    fun getPairListFromFirestore(): Flow<Resource<ArrayList<PairListModel
