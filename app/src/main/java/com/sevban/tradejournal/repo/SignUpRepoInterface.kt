@@ -3,4 +3,5 @@ package com.sevban.tradejournal.repo
 import androidx.navigation.NavController
 import com.sevban.tradejournal.model.User
 
-interface Sig
+interface SignUpRepoInterface {
+    suspend fun createUser(user: User, na
