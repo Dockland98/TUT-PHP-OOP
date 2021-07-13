@@ -4,4 +4,5 @@ import androidx.navigation.NavController
 import com.sevban.tradejournal.model.User
 
 interface SignUpRepoInterface {
-    suspend fun createUser(user: User, na
+    suspend fun createUser(user: User, navController: NavController)
+}
