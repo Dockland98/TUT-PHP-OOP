@@ -83,3 +83,27 @@ class PairDetailRepository @Inject constructor(
         data.id = newRef.id // 👈 set the ID into your object
 
         newRef.set(data)    // 👈 writes the data to the new reference
+            .addOnFailureListener { exception ->
+                exception.printStackTrace()
+            }
+    }
+
+    override suspend fun deleteFromFirebase(
+        analyze: AnalyzeModel,
+        analyzeList: ArrayList<AnalyzeModel>?,
+        pairId: String,
+        context: Context
+    ) {
+
+        try {
+            pairCollection.document(pairId).collection("Analysis").document(analyze.id).delete()
+                .await()
+
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+
+                Toast.makeText(context, e.localizedMessage, Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+}
