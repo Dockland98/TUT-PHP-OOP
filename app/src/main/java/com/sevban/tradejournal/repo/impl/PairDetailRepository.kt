@@ -34,3 +34,52 @@ class PairDetailRepository @Inject constructor(
         pairCollection
             .document(currentPairId)
             .collection("Analysis").orderBy("date", Query.Direction.DESCENDING)
+            .getRealTime { getNextSnapshot ->
+                while (true) {
+                    val value = getNextSnapshot()
+
+                    if (value != null) {
+
+                        analyzeList.clear()
+
+                        for (document in value) {
+                            try {
+                                analyzeList.add(document.toObject(AnalyzeModel::class.java))
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                        }
+                    }
+                }
+            }
+        }*/
+
+    override fun getProductListFromFirestore(currentPairId: String) = callbackFlow {
+
+        val analyzeQuery = pairCollection
+            .document(currentPairId)
+            .collection("Analysis").orderBy("date", Query.Direction.DESCENDING)
+
+        val snapshotListener = analyzeQuery.addSnapshotListener { snapshot, e ->
+            val response = if (snapshot != null) {
+                val analyzeList = snapshot.toObjects(AnalyzeModel::class.java) as ArrayList
+                Resource.Success(analyzeList)
+            } else {
+                Resource.Error(e?.message ?: e.toString())
+            }
+            trySend(response).isSuccess
+        }
+        awaitClose {
+            snapshotListener.remove()
+        }
+    }
+
+    override suspend fun saveAnalyze(data: AnalyzeModel, currentPairId: String) {
+        val newRef = pairCollection
+            .document(currentPairId)
+            .collection("Analysis")
+            .document()    // 👈 generates a new reference with a unique ID
+
+        data.id = newRef.id // 👈 set the ID into your object
+
+        newRef.set(data)    // 👈 writes the data to the new reference
