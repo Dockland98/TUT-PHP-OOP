@@ -52,3 +52,61 @@ class ProfileRepository @Inject constructor(
 
                     if (value != null) {
                         for (document in value) {
+
+                           try {
+
+                                val model = document.toObject(User::class.java)
+                                modelState.value = model
+
+
+                            } catch (e: Exception) {
+                               e.printStackTrace()
+                            }
+                        }
+                    }
+                }
+            }
+
+    }
+
+    override suspend fun addPair(newPair: String) {
+
+        val docRef = FirebaseFirestore.getInstance().collection("Pairs")
+            .document(firebase.currentUser?.email.toString())
+            .collection("Pair").document()
+
+        val newPairObj = PairListModel(newPair, docRef.id)
+
+        docRef.set(newPairObj).await()
+    }
+
+    override suspend fun retrievePairsFromFirebase(pairState: MutableList<PairListModel>) {
+
+        FirebaseFirestore.getInstance().collection("Pairs")
+            .document(firebase.currentUser?.email.toString())
+            .collection("Pair").orderBy("id",
+                Query.Direction.DESCENDING
+            ).getRealTime { getPairSnapshot ->
+            while (true) {
+
+                val value = getPairSnapshot() ?: continue
+
+                pairState.clear()
+
+                value.documents.forEach { documentSnapshot ->
+                    if (documentSnapshot.exists()) {
+
+                        val retreivedObj = documentSnapshot.toObject(PairListModel::class.java)
+
+                        pairState.add(retreivedObj!!)
+                    }
+                }
+            }
+        }
+    }
+
+    override fun getPairListFromFirestore() = callbackFlow {
+
+        val analyzeQuery = FirebaseFirestore.getInstance().collection("Pairs")
+            .document(firebase.currentUser?.email.toString())
+            .collection("Pair").orderBy("id", Query.Direction.DESCENDING)
