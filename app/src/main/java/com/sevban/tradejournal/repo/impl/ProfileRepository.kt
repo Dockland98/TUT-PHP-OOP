@@ -110,3 +110,20 @@ class ProfileRepository @Inject constructor(
         val analyzeQuery = FirebaseFirestore.getInstance().collection("Pairs")
             .document(firebase.currentUser?.email.toString())
             .collection("Pair").orderBy("id", Query.Direction.DESCENDING)
+
+        val snapshotListener = analyzeQuery.addSnapshotListener { snapshot, e ->
+            val response = if (snapshot != null) {
+                val pairList = snapshot.toObjects(PairListModel::class.java) as ArrayList
+                Resource.Success(pairList)
+            } else {
+                Resource.Error(e?.message ?: e.toString())
+            }
+            trySend(response).isSuccess
+        }
+        awaitClose {
+            snapshotListener.remove()
+        }
+    }
+    override fun searchPair() {}
+
+}
