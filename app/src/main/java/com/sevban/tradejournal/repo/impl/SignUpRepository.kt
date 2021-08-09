@@ -31,3 +31,19 @@ class SignUpRepository @Inject constructor(
 
             auth.signInWithEmailAndPassword(user.email, user.password)
                 .await()
+
+            withContext(Dispatchers.Main) {
+                navController.navigate(ScreenHolder.ProfileScreen.route) {
+                    popUpTo(ScreenHolder.SignUpScreen.route) {
+                        inclusive = true
+                    }
+                }
+            }
+
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+}
