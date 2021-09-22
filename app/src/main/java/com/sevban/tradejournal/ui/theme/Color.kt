@@ -14,4 +14,7 @@ val Teal400Light = Color(0xFF64d8cb)
 val Teal400Dark = Color(0xFF00766c)
 val Red700 = Color(0xFFd32f2f)
 val Red700Light = Color(0xFFff6659)
-val Red700Dark = Color(0
+val Red700Dark = Color(0xFF9a0007)
+val Red700Text = Color(0xFFffffff)
+
+
