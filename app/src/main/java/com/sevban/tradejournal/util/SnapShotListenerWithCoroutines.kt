@@ -1,3 +1,3 @@
 package com.sevban.tradejournal.util
 
-imp
+import com.google.firebase.firestore.FirebaseFirestoreException
