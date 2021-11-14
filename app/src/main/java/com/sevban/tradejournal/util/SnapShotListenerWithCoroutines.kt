@@ -6,4 +6,5 @@ import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.trySendBlocking
 
-    suspend fun Query.getRealTime(block: suspend (getNextSnapsh
+    suspend fun Query.getRealTime(block: suspend (getNextSnapshot: suspend () -> QuerySnapshot?) -> Unit) {
+    
