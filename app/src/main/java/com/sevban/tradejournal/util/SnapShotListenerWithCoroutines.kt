@@ -9,4 +9,4 @@ import kotlinx.coroutines.channels.trySendBlocking
     suspend fun Query.getRealTime(block: suspend (getNextSnapshot: suspend () -> QuerySnapshot?) -> Unit) {
         val channel = Channel<Pair<QuerySnapshot?, FirebaseFirestoreException?>>(Channel.UNLIMITED)
 
-        val list
+        val listenerRegistration = this.addSnapshotListener { value, error ->
