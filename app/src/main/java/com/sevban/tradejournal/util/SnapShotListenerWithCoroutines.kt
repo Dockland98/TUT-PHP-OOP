@@ -7,4 +7,4 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.trySendBlocking
 
     suspend fun Query.getRealTime(block: suspend (getNextSnapshot: suspend () -> QuerySnapshot?) -> Unit) {
-    
+        val channel = Channel<Pair<QuerySnapshot?, FirebaseF
