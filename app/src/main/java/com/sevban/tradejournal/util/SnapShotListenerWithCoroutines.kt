@@ -10,4 +10,8 @@ import kotlinx.coroutines.channels.trySendBlocking
         val channel = Channel<Pair<QuerySnapshot?, FirebaseFirestoreException?>>(Channel.UNLIMITED)
 
         val listenerRegistration = this.addSnapshotListener { value, error ->
-            channel.trySendBlocking(Pair(valu
+            channel.trySendBlocking(Pair(value, error))
+        }
+
+        try {
+            block {
