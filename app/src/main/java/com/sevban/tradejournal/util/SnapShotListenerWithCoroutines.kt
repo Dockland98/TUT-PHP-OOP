@@ -15,3 +15,6 @@ import kotlinx.coroutines.channels.trySendBlocking
 
         try {
             block {
+                val (value, error) = channel.receive()
+
+ 
