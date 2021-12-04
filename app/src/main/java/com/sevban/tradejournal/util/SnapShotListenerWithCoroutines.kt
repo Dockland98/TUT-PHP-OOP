@@ -17,4 +17,5 @@ import kotlinx.coroutines.channels.trySendBlocking
             block {
                 val (value, error) = channel.receive()
 
- 
+                if (error != null) {
+                    throw
