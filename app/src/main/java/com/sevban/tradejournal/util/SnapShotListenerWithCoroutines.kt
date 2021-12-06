@@ -21,4 +21,6 @@ import kotlinx.coroutines.channels.trySendBlocking
                     throw error
                 }
                 value
-    
+            }
+        } finally {
+            channel
