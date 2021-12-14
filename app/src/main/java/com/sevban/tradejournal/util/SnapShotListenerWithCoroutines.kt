@@ -23,4 +23,7 @@ import kotlinx.coroutines.channels.trySendBlocking
                 value
             }
         } finally {
-            channel
+            channel.close()
+            listenerRegistration.remove()
+        }
+    }
