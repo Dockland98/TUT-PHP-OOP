@@ -3,4 +3,5 @@ package com.sevban.tradejournal.util
 import java.util.regex.Pattern
 
 fun fetchIdOfImageFromURL(url: String?): String {
-    if (url == null || !Pattern.matches("^https:\\/\\/www\\.
+    if (url == null || !Pattern.matches("^https:\\/\\/www\\.tradingview\\.com\\/x\\/[A-Za-z0-9]+$", url))
+     
