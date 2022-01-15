@@ -7,4 +7,5 @@ fun fetchIdOfImageFromURL(url: String?): String {
         throw java.lang.Exception("Entered URL does not match with a tradingview url chart link.")
     val parts = url.split("/")
     val id = parts[4]
-    val actualChartImage = "https://s3.tradingview.com/snapshot
+    val actualChartImage = "https://s3.tradingview.com/snapshots/${id[0].lowercaseChar()}/${id}.png"
+    return actu
