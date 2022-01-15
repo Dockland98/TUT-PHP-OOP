@@ -8,4 +8,5 @@ fun fetchIdOfImageFromURL(url: String?): String {
     val parts = url.split("/")
     val id = parts[4]
     val actualChartImage = "https://s3.tradingview.com/snapshots/${id[0].lowercaseChar()}/${id}.png"
-    return actu
+    return actualChartImage
+}
