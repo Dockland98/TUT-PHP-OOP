@@ -5,4 +5,5 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.core.sp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import and
