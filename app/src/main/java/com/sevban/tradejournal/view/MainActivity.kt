@@ -8,4 +8,5 @@ import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.sev
+import com.sevban.tradejournal.ui.theme.TradeJournalTheme
+import com.s
