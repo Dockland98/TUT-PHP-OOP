@@ -9,4 +9,5 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.sevban.tradejournal.ui.theme.TradeJournalTheme
-import com.s
+import com.sevban.tradejournal.view.screens.PairDetailScreen
+import com.sevb
