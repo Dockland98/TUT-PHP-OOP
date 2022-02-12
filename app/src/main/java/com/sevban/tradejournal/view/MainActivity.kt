@@ -10,4 +10,5 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.sevban.tradejournal.ui.theme.TradeJournalTheme
 import com.sevban.tradejournal.view.screens.PairDetailScreen
-import com.sevb
+import com.sevban.tradejournal.view.screens.ProfileScreen
+import dagger.hilt
