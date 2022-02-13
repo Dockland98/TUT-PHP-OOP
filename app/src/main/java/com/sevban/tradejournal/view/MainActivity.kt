@@ -11,4 +11,6 @@ import androidx.navigation.compose.rememberNavController
 import com.sevban.tradejournal.ui.theme.TradeJournalTheme
 import com.sevban.tradejournal.view.screens.PairDetailScreen
 import com.sevban.tradejournal.view.screens.ProfileScreen
-import dagger.hilt
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
