@@ -18,4 +18,4 @@ class MainActivity : ComponentActivity() {
 
     lateinit var navController: NavHostController
 
-   
+    override fun onCreate(savedInstanceState: Bund
