@@ -18,4 +18,5 @@ class MainActivity : ComponentActivity() {
 
     lateinit var navController: NavHostController
 
-    override fun onCreate(savedInstanceState: Bund
+    override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScre
