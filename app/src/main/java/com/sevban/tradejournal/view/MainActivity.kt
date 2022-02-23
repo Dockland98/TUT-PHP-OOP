@@ -22,4 +22,6 @@ class MainActivity : ComponentActivity() {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
 
-        val urlFromIntent = intent.getStringExtra(Intent.
+        val urlFromIntent = intent.getStringExtra(Intent.EXTRA_TEXT)
+        if (urlFromIntent != null)
+        
