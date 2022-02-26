@@ -26,4 +26,7 @@ class MainActivity : ComponentActivity() {
         if (urlFromIntent != null)
             println(urlFromIntent)
         else
-            prin
+            println("url is nullllllllllllll")
+
+        setContent {
+ 
