@@ -24,4 +24,6 @@ class MainActivity : ComponentActivity() {
 
         val urlFromIntent = intent.getStringExtra(Intent.EXTRA_TEXT)
         if (urlFromIntent != null)
-        
+            println(urlFromIntent)
+        else
+            prin
