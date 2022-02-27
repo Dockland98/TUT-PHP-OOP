@@ -29,4 +29,5 @@ class MainActivity : ComponentActivity() {
             println("url is nullllllllllllll")
 
         setContent {
- 
+            TradeJournalTheme {
+                navController = r
