@@ -30,4 +30,5 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             TradeJournalTheme {
-                navController = r
+                navController = rememberNavController()
+                    Setu
