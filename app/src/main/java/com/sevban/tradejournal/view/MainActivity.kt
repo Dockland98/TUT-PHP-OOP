@@ -31,4 +31,4 @@ class MainActivity : ComponentActivity() {
         setContent {
             TradeJournalTheme {
                 navController = rememberNavController()
-                    Setu
+                    SetupNavGraph(navController = navController, context = th
