@@ -32,4 +32,7 @@ class MainActivity : ComponentActivity() {
             TradeJournalTheme {
                 navController = rememberNavController()
                     SetupNavGraph(navController = navController, context = this, urlFromIntent = urlFromIntent)
-          
+            }
+        }
+    }
+}
