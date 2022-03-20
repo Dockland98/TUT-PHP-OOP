@@ -13,4 +13,6 @@ import com.sevban.tradejournal.view.screens.*
 
 
 @Composable
-fun SetupNavGra
+fun SetupNavGraph(
+    navController: NavHostController,
+    context: Con
