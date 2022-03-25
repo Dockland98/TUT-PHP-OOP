@@ -15,4 +15,9 @@ import com.sevban.tradejournal.view.screens.*
 @Composable
 fun SetupNavGraph(
     navController: NavHostController,
-    context: Con
+    context: Context,
+    urlFromIntent: String?
+) {
+
+    NavHost(
+      
