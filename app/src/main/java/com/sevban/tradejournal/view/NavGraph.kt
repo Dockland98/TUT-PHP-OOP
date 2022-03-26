@@ -20,4 +20,5 @@ fun SetupNavGraph(
 ) {
 
     NavHost(
-      
+        navController = navController,
+        startDest
