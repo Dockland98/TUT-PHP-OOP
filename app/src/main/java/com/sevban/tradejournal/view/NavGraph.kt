@@ -21,4 +21,6 @@ fun SetupNavGraph(
 
     NavHost(
         navController = navController,
-        startDest
+        startDestination = ScreenHolder.SigningScreen.route,
+    ) {
+        composable(S
