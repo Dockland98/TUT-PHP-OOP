@@ -24,4 +24,7 @@ fun SetupNavGraph(
         startDestination = ScreenHolder.SigningScreen.route,
     ) {
         composable(ScreenHolder.SigningScreen.route) {
-           SignScreen(navController = navController, conte
+           SignScreen(navController = navController, context = context)
+
+        }
+        composable(
