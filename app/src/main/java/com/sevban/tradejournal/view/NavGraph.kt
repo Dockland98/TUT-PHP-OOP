@@ -28,4 +28,6 @@ fun SetupNavGraph(
 
         }
         composable(ScreenHolder.ProfileScreen.route) {
-            ProfileScreen(nav
+            ProfileScreen(navController = navController)
+        }
+        composable(Sc
