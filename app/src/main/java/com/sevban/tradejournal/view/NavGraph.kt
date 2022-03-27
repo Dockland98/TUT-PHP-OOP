@@ -32,4 +32,5 @@ fun SetupNavGraph(
         }
         composable(ScreenHolder.SignUpScreen.route){
             SignUpScreen(context = context, navController = navController)
- 
+        }
+        composable("pair_detail_screen/{currenc
