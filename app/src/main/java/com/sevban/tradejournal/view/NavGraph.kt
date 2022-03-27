@@ -27,4 +27,5 @@ fun SetupNavGraph(
            SignScreen(navController = navController, context = context)
 
         }
-        composable(
+        composable(ScreenHolder.ProfileScreen.route) {
+            ProfileScreen(nav
