@@ -30,4 +30,5 @@ fun SetupNavGraph(
         composable(ScreenHolder.ProfileScreen.route) {
             ProfileScreen(navController = navController)
         }
-        composable(Sc
+        composable(ScreenHolder.SignUpScreen.route){
+            SignUpScr
