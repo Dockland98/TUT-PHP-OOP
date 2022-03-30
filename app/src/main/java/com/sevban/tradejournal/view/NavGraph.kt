@@ -34,4 +34,5 @@ fun SetupNavGraph(
             SignUpScreen(context = context, navController = navController)
         }
         composable("pair_detail_screen/{currencyId}/{pairName}", arguments = listOf(
-            navArgume
+            navArgument("pairName"){
+                type= NavType.Str
