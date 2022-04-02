@@ -35,4 +35,6 @@ fun SetupNavGraph(
         }
         composable("pair_detail_screen/{currencyId}/{pairName}", arguments = listOf(
             navArgument("pairName"){
-                type= NavType.Str
+                type= NavType.StringType
+            },
+            navArgument("currencyId")
