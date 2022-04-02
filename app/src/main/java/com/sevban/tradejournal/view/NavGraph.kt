@@ -37,4 +37,5 @@ fun SetupNavGraph(
             navArgument("pairName"){
                 type= NavType.StringType
             },
-            navArgument("currencyId")
+            navArgument("currencyId"){
+                type= NavType.StringTyp
