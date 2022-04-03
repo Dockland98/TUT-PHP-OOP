@@ -38,4 +38,7 @@ fun SetupNavGraph(
                 type= NavType.StringType
             },
             navArgument("currencyId"){
-                type= NavType.StringTyp
+                type= NavType.StringType
+            }
+        )){
+            va
