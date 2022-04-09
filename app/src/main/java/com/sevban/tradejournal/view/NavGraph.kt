@@ -45,4 +45,5 @@ fun SetupNavGraph(
                 it.arguments?.getString("pairName")
             }
 
-            val currencyId= 
+            val currencyId= remember {
+                it.arguments?.getString("currencyId"
