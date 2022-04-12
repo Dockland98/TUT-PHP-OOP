@@ -49,4 +49,7 @@ fun SetupNavGraph(
                 it.arguments?.getString("currencyId")
             }
 
-            PairDetailScreen( currencyId!!,pairName?:"Pair id alınamadı", navController, urlFro
+            PairDetailScreen( currencyId!!,pairName?:"Pair id alınamadı", navController, urlFromIntent = urlFromIntent)
+        }
+    }
+}
