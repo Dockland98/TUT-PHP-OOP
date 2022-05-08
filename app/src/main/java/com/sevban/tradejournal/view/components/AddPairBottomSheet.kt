@@ -11,4 +11,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.shape.RoundedCornerShape as RoundedCornerShape1
 
 @Composable
-fun AddPairBotto
+fun AddPairBottomSheet(
+    urlState: String,
+    entryReas
