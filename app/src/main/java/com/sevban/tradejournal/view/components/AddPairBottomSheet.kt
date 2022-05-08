@@ -17,4 +17,6 @@ fun AddPairBottomSheet(
     resultText: String,
     notesText: String,
     onClick: () -> Unit,
-    onUrlChange: (Stri
+    onUrlChange: (String) -> Unit,
+    onResultChange: (String) -> Unit,
+ 
