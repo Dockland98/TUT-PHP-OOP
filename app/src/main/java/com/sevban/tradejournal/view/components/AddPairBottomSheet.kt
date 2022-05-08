@@ -13,4 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape as RoundedCornerShap
 @Composable
 fun AddPairBottomSheet(
     urlState: String,
-    entryReas
+    entryReasonText: String,
+    resultText: String,
+    notesText: Strin
