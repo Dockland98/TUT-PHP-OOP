@@ -26,4 +26,8 @@ fun AddPairBottomSheet(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .padding(16.dp)
+    ) {
+
+        Column(
             
