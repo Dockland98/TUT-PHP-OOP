@@ -24,4 +24,6 @@ fun AddPairBottomSheet(
 ) {
 
     Box(
-        modifier =
+        modifier = Modifier
+            .fillMaxSize()
+            
