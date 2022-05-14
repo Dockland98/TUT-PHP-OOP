@@ -30,4 +30,4 @@ fun AddPairBottomSheet(
     ) {
 
         Column(
-            
+            modifier = Modifier.fillMaxWidth(), horizontal
