@@ -20,4 +20,8 @@ fun AddPairBottomSheet(
     onUrlChange: (String) -> Unit,
     onResultChange: (String) -> Unit,
     onEntryReasonChange: (String) -> Unit,
-    onNote
+    onNotesChange: (String) -> Unit
+) {
+
+    Box(
+        modifier =
