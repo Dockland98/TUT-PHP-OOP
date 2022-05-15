@@ -30,4 +30,6 @@ fun AddPairBottomSheet(
     ) {
 
         Column(
-            modifier = Modifier.fillMaxWidth(), horizontal
+            modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+    
