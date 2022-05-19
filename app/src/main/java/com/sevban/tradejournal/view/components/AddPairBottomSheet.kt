@@ -33,4 +33,6 @@ fun AddPairBottomSheet(
             modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
         ) {
             AnalyzeTextFields(
-                urlSta
+                urlState,
+                labelString = "URL",
+ 
