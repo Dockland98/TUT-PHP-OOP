@@ -35,4 +35,5 @@ fun AddPairBottomSheet(
             AnalyzeTextFields(
                 urlState,
                 labelString = "URL",
-                placeholderString = "TradingView Chart Ur
+                placeholderString = "TradingView Chart Url",
+                onValueChange = onUrlCh
