@@ -36,4 +36,7 @@ fun AddPairBottomSheet(
                 urlState,
                 labelString = "URL",
                 placeholderString = "TradingView Chart Url",
-                onValueChange = onUrlCh
+                onValueChange = onUrlChange
+            )
+
+            Spacer(modifie
