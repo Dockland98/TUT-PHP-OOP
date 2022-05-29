@@ -40,4 +40,6 @@ fun AddPairBottomSheet(
             )
 
             Spacer(modifier = Modifier.padding(vertical = 5.dp))
-       
+            AnalyzeTextFields(
+                entryReasonText,
+              
