@@ -43,4 +43,5 @@ fun AddPairBottomSheet(
             AnalyzeTextFields(
                 entryReasonText,
                 "Reason",
-                "Reason for entry liquidity,fun
+                "Reason for entry liquidity,fundamental...",
+                onValueChange = onEnt
