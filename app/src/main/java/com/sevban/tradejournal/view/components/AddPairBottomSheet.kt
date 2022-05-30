@@ -42,4 +42,5 @@ fun AddPairBottomSheet(
             Spacer(modifier = Modifier.padding(vertical = 5.dp))
             AnalyzeTextFields(
                 entryReasonText,
-              
+                "Reason",
+                "Reason for entry liquidity,fun
