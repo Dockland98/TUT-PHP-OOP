@@ -46,4 +46,5 @@ fun AddPairBottomSheet(
                 "Reason for entry liquidity,fundamental...",
                 onValueChange = onEntryReasonChange
             )
-            Spacer(modifie
+            Spacer(modifier = Modifier.padding(vertical = 5.dp))
+            AnalyzeTex
