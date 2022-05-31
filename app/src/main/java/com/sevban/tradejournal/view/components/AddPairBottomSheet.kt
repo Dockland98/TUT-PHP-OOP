@@ -44,4 +44,6 @@ fun AddPairBottomSheet(
                 entryReasonText,
                 "Reason",
                 "Reason for entry liquidity,fundamental...",
-                onValueChange = onEnt
+                onValueChange = onEntryReasonChange
+            )
+            Spacer(modifie
