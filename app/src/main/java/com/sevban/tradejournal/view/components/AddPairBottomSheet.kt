@@ -51,4 +51,5 @@ fun AddPairBottomSheet(
                 notesText,
                 "Notes",
                 "Additional notes of you",
-  
+                onValueChange = onNotesChange
+ 
