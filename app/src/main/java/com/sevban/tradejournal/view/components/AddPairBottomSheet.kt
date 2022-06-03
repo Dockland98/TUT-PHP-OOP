@@ -56,4 +56,5 @@ fun AddPairBottomSheet(
             Spacer(modifier = Modifier.padding(vertical = 5.dp))
             AnalyzeTextFields(
                 resultText,
-         
+                "Result",
+                "Is operation/gu
