@@ -52,4 +52,5 @@ fun AddPairBottomSheet(
                 "Notes",
                 "Additional notes of you",
                 onValueChange = onNotesChange
- 
+            )
+            Spacer(modifier = Modif
