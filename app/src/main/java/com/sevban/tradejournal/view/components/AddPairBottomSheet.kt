@@ -54,4 +54,6 @@ fun AddPairBottomSheet(
                 onValueChange = onNotesChange
             )
             Spacer(modifier = Modifier.padding(vertical = 5.dp))
-            AnalyzeTextF
+            AnalyzeTextFields(
+                resultText,
+         
