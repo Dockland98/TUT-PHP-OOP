@@ -57,4 +57,6 @@ fun AddPairBottomSheet(
             AnalyzeTextFields(
                 resultText,
                 "Result",
-                "Is operation/gu
+                "Is operation/guess okay ?",
+                onValueChange = onResultChange
+ 
