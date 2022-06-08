@@ -61,4 +61,6 @@ fun AddPairBottomSheet(
                 onValueChange = onResultChange
             )
 
-            Spacer(modifier = Modifier.padding
+            Spacer(modifier = Modifier.padding(vertical = 5.dp))
+            Row(
+                modifier = Modifier.fi
