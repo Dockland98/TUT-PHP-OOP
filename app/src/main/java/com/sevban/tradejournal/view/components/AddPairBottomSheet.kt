@@ -59,4 +59,6 @@ fun AddPairBottomSheet(
                 "Result",
                 "Is operation/guess okay ?",
                 onValueChange = onResultChange
- 
+            )
+
+            Spacer(modifier = Modifier.padding
