@@ -67,4 +67,5 @@ fun AddPairBottomSheet(
             ) {
                 Button(
                     onClick = onClick,
-                    colors = ButtonDefaults.buttonColors(bac
+                    colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+       
