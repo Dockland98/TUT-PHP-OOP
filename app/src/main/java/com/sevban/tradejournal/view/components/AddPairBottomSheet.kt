@@ -66,4 +66,5 @@ fun AddPairBottomSheet(
                 modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center
             ) {
                 Button(
-     
+                    onClick = onClick,
+        
