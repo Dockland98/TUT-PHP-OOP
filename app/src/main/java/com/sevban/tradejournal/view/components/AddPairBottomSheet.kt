@@ -68,4 +68,5 @@ fun AddPairBottomSheet(
                 Button(
                     onClick = onClick,
                     colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
-       
+                    shape = RoundedCornerShape1(20.dp),
+      
