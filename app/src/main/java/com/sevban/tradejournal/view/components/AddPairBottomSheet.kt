@@ -69,4 +69,4 @@ fun AddPairBottomSheet(
                     onClick = onClick,
                     colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
                     shape = RoundedCornerShape1(20.dp),
-      
+                ) { Text(text = "Add analyze", fontSize = 20.sp)
