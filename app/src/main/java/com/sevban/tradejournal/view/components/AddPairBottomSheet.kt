@@ -76,4 +76,7 @@ fun AddPairBottomSheet(
 }
 
 @Composable
-f
+fun AnalyzeTextFields(
+    text: String,
+    labelString: String,
+    
