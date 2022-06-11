@@ -79,4 +79,5 @@ fun AddPairBottomSheet(
 fun AnalyzeTextFields(
     text: String,
     labelString: String,
-    
+    placeholderString: String,
+    onValueChange: (String) ->
