@@ -85,4 +85,5 @@ fun AnalyzeTextFields(
     TextField(
         value = text,
         onValueChange = onValueChange,
-        mod
+        modifier = Modifier.fillMaxWidth(),
+        label = { Text(
