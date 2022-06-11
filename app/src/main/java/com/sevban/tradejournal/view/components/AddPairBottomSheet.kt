@@ -80,4 +80,8 @@ fun AnalyzeTextFields(
     text: String,
     labelString: String,
     placeholderString: String,
-    onValueChange: (String) ->
+    onValueChange: (String) -> Unit
+) {
+    TextField(
+        value = text,
+ 
