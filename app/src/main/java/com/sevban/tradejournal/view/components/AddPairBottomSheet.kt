@@ -84,4 +84,5 @@ fun AnalyzeTextFields(
 ) {
     TextField(
         value = text,
- 
+        onValueChange = onValueChange,
+        mod
