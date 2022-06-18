@@ -88,4 +88,5 @@ fun AnalyzeTextFields(
         modifier = Modifier.fillMaxWidth(),
         label = { Text(text = labelString) },
         placeholder = { Text(text = placeholderString) },
-        colors = TextFieldDefaults
+        colors = TextFieldDefaults.textFieldColors(
+            textColor = MaterialTheme.colors.onBack
