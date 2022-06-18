@@ -90,4 +90,7 @@ fun AnalyzeTextFields(
         placeholder = { Text(text = placeholderString) },
         colors = TextFieldDefaults.textFieldColors(
             textColor = MaterialTheme.colors.onBackground,
-            backgroundColor = MaterialTheme.colors.b
+            backgroundColor = MaterialTheme.colors.background
+        )
+    )
+}
