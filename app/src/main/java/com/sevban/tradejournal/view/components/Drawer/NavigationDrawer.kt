@@ -49,3 +49,12 @@ fun DrawerBody(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Text(
+                    text = item.title,
+                    style = itemTextStyle,
+                    modifier = Modifier.weight(1f)
+
+                )
+            }
+        }
+    }
+}
