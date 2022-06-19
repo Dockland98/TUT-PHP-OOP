@@ -41,3 +41,19 @@ fun SearchBar(
                 .fillMaxWidth()
                 .border(border = BorderStroke(2.dp, Color.Black), shape = CircleShape)
                 .background(Color.White, CircleShape)
+                .padding(horizontal = 20.dp, vertical = 12.dp)
+                .onFocusChanged {
+                    isHintDisplayed = it.isFocused != true && searchText.isEmpty()
+                },
+        )
+
+        if (isHintDisplayed) {
+            Text(
+                text = hint,
+                color = Color.LightGray,
+                modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp)
+            )
+        }
+    }
+
+}
