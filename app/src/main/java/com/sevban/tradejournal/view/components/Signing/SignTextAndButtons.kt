@@ -8,4 +8,5 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx
+import androidx.compose.ui.text.input.KeyboardCapitalization
+import andr
