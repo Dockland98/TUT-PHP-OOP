@@ -12,4 +12,5 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import android
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavCo
