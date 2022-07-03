@@ -17,4 +17,7 @@ import androidx.navigation.NavController
 
 
 @Composable
-fun EmailText(text: String, ema
+fun EmailText(text: String, emailState: (String) -> Unit) {
+
+
+    OutlinedTextField(
