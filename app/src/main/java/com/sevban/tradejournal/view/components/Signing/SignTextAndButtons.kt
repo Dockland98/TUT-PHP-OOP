@@ -22,4 +22,6 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
 
     OutlinedTextField(
         value = text,
-        onValueChange = ema
+        onValueChange = emailState,
+        label = { Text("E-mail") },
+        singleLine 
