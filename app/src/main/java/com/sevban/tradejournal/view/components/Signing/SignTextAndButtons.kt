@@ -24,4 +24,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
         value = text,
         onValueChange = emailState,
         label = { Text("E-mail") },
-        singleLine 
+        singleLine = true,
+        keyboardOptions = KeyboardOption
