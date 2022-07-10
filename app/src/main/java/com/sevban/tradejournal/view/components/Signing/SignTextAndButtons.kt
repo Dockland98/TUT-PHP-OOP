@@ -25,4 +25,6 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
         onValueChange = emailState,
         label = { Text("E-mail") },
         singleLine = true,
-        keyboardOptions = KeyboardOption
+        keyboardOptions = KeyboardOptions(
+            keyboardType = KeyboardType.Email,
+        
