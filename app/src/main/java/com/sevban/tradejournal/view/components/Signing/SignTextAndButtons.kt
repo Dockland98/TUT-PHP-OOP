@@ -27,4 +27,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
         singleLine = true,
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Email,
-        
+            capitalization = KeyboardCapitalization.None
+        ),
