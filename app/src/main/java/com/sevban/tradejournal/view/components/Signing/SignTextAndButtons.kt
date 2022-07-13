@@ -29,3 +29,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
             keyboardType = KeyboardType.Email,
             capitalization = KeyboardCapitalization.None
         ),
+        colors = TextFieldDefaults
+         
