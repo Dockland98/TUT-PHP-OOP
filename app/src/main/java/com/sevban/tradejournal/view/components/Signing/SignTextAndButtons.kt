@@ -30,4 +30,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
             capitalization = KeyboardCapitalization.None
         ),
         colors = TextFieldDefaults
-         
+            .textFieldColors(
+                textColor = Mater
