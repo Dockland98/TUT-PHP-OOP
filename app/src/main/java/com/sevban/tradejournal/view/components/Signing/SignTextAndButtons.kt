@@ -31,4 +31,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
         ),
         colors = TextFieldDefaults
             .textFieldColors(
-                textColor = Mater
+                textColor = MaterialTheme.colors.onBackground,
+                backgroundColor = Materi
