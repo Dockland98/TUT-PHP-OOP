@@ -32,4 +32,9 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
         colors = TextFieldDefaults
             .textFieldColors(
                 textColor = MaterialTheme.colors.onBackground,
-                backgroundColor = Materi
+                backgroundColor = MaterialTheme.colors.background
+            )
+    )
+}
+
+@Composabl
