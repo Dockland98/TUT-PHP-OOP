@@ -38,4 +38,6 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
 }
 
 @Composable
-fun PasswordText(text: String, passwordState
+fun PasswordText(text: String, passwordState: (String) -> Unit) {
+
+    OutlinedTextField(
