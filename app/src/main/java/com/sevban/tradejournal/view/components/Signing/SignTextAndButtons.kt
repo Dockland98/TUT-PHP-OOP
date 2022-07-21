@@ -41,3 +41,6 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
 fun PasswordText(text: String, passwordState: (String) -> Unit) {
 
     OutlinedTextField(
+        value = text,
+        onValueChange = passwordState,
+   
