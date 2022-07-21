@@ -37,4 +37,5 @@ fun EmailText(text: String, emailState: (String) -> Unit) {
     )
 }
 
-@Composabl
+@Composable
+fun PasswordText(text: String, passwordState
