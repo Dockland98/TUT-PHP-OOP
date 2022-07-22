@@ -43,4 +43,5 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
     OutlinedTextField(
         value = text,
         onValueChange = passwordState,
-   
+        label = { Text("Password") },
+        singleLin
