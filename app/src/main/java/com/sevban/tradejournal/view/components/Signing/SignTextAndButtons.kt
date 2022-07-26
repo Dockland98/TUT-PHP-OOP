@@ -45,4 +45,5 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
         onValueChange = passwordState,
         label = { Text("Password") },
         singleLine = true,
-        visualTransformation = Passw
+        visualTransformation = PasswordVisualTransformation(),
+        keyboardOptions = Keybo
