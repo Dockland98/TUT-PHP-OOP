@@ -46,4 +46,5 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
         label = { Text("Password") },
         singleLine = true,
         visualTransformation = PasswordVisualTransformation(),
-        keyboardOptions = Keybo
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        colors
