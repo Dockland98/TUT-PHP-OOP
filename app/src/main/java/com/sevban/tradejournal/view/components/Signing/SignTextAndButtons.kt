@@ -49,4 +49,5 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         colors = TextFieldDefaults
             .textFieldColors(
-                textColor = MaterialTheme.colors.onBackgro
+                textColor = MaterialTheme.colors.onBackground,
+                backgroundColor = MaterialTheme.colors.backgro
