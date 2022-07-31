@@ -47,4 +47,6 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
         singleLine = true,
         visualTransformation = PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-        colors
+        colors = TextFieldDefaults
+            .textFieldColors(
+      
