@@ -50,4 +50,10 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
         colors = TextFieldDefaults
             .textFieldColors(
                 textColor = MaterialTheme.colors.onBackground,
-                backgroundColor = MaterialTheme.colors.backgro
+                backgroundColor = MaterialTheme.colors.background
+            )
+    )
+}
+
+@Composable
+fun Gener
