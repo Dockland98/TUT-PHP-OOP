@@ -56,4 +56,4 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
 }
 
 @Composable
-fun Gener
+fun GeneralButton(onClicked: () -> Unit, text: String, navControl
