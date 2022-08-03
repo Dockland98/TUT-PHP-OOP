@@ -59,4 +59,5 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
 fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavController) {
 
     Surface(
-        color =
+        color = MaterialTheme.colors.background,
+        conten
