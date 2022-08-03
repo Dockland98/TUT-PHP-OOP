@@ -56,4 +56,7 @@ fun PasswordText(text: String, passwordState: (String) -> Unit) {
 }
 
 @Composable
-fun GeneralButton(onClicked: () -> Unit, text: String, navControl
+fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavController) {
+
+    Surface(
+        color =
