@@ -63,4 +63,5 @@ fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavControl
         contentColor = contentColorFor(MaterialTheme.colors.onBackground)
     ) {
         Button(
-            onClick = onClick
+            onClick = onClicked,
+            //colors = ButtonDefaults.bu
