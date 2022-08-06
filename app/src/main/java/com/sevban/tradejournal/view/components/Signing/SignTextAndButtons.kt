@@ -67,3 +67,6 @@ fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavControl
             //colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
             shape = RoundedCornerShape(20.dp),
         ) {
+            Text(
+                text = text,
+     
