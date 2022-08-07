@@ -77,4 +77,6 @@ fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavControl
 }
 
 @Composable
-fun LessFocusedButton(onClicked: () -> Unit
+fun LessFocusedButton(onClicked: () -> Unit, text: String, navController: NavController) {
+
+    Sur
