@@ -84,4 +84,5 @@ fun LessFocusedButton(onClicked: () -> Unit, text: String, navController: NavCon
         contentColor = contentColorFor(MaterialTheme.colors.onBackground)
     ) {
         Button(
-        
+            onClick = onClicked,
+            bor
