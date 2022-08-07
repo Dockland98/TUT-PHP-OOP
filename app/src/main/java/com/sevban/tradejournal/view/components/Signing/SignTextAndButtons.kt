@@ -85,4 +85,4 @@ fun LessFocusedButton(onClicked: () -> Unit, text: String, navController: NavCon
     ) {
         Button(
             onClick = onClicked,
-            bor
+            border = BorderStroke(2.dp, MaterialTheme.colors.prima
