@@ -69,4 +69,5 @@ fun GeneralButton(onClicked: () -> Unit, text: String, navController: NavControl
         ) {
             Text(
                 text = text,
-     
+                modifier = Modifier.padding(7.dp),
+       
