@@ -87,4 +87,5 @@ fun LessFocusedButton(onClicked: () -> Unit, text: String, navController: NavCon
             onClick = onClicked,
             border = BorderStroke(2.dp, MaterialTheme.colors.primary),
             shape = RoundedCornerShape(20.dp),
-            //colors = ButtonDefaults.outlinedButtonColor
+            //colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colors.primary),
+            m
