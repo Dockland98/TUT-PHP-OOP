@@ -92,4 +92,5 @@ fun LessFocusedButton(onClicked: () -> Unit, text: String, navController: NavCon
         ) {
             Text(
                 text = text,
-      
+                fontSize = 20.sp,
+                //colo
