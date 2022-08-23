@@ -48,3 +48,59 @@ fun PairDetailScreen(
 ) {
 
     val scope = rememberCoroutineScope()
+    val sheetState = rememberBottomSheetState(initialValue = BottomSheetValue.Collapsed)
+    val bottomScaffoldState = rememberBottomSheetScaffoldState(bottomSheetState = sheetState)
+
+    var entryReasonText by remember { mutableStateOf("") }
+    var resultText by remember { mutableStateOf("") }
+    var notesText by remember { mutableStateOf("") }
+    var urlState by remember { mutableStateOf("") }
+
+    if (urlFromIntent != null)
+        urlState = urlFromIntent
+
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background,
+        contentColor = contentColorFor(MaterialTheme.colors.onBackground)
+    ) {
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            floatingActionButton = {
+                if (bottomScaffoldState.bottomSheetState.isCollapsed)
+                    FloatingActionButton(
+                        onClick = { scope.launch { sheetState.expand() } },
+                        modifier = Modifier,
+                        shape = CircleShape,
+                        backgroundColor = MaterialTheme.colors.primary
+                    ) { Icon(imageVector = Icons.Default.Add, contentDescription = "Add analyze") }
+            },
+            floatingActionButtonPosition = FabPosition.End
+
+        ) { paddingValues ->
+            BottomSheetScaffold(
+                modifier = Modifier.padding(paddingValues),
+                scaffoldState = bottomScaffoldState,
+                sheetContent = {
+                    AddPairBottomSheet(
+                        urlState = urlState,
+                        entryReasonText = entryReasonText,
+                        resultText = resultText,
+                        notesText = notesText,
+                        onClick = {
+                            scope.launch {
+                                try {
+                                    urlState = fetchIdOfImageFromURL(urlState)
+                                } catch (e: java.lang.Exception) {
+                                    bottomScaffoldState.snackbarHostState.showSnackbar(e.message.toString())
+                                    return@launch
+                                }
+                                val analyze = AnalyzeModel(
+                                    reason = entryReasonText,
+                                    result = resultText,
+                                    rrRatio = 0.0,
+                                    tradingViewUrl = urlState,
+                                    notes = notesText
+                                )
+                                sheetState.collapse()
+                                viewModel.save(analyze, currencyId)
