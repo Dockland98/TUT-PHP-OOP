@@ -82,3 +82,54 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel = hi
     }
     var pairList = viewModel.pairListResponse
     val isLoading = viewModel.isLoading
+
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background,
+        contentColor = contentColorFor(MaterialTheme.colors.onBackground)
+    ) {
+        if (isLoading) {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        }
+        else {
+
+            Scaffold(
+                scaffoldState = scaffoldState,
+                topBar = {
+                    com.sevban.tradejournal.view.components.Drawer.AppBar(onNavigationItemClick = {
+                        scope.launch {
+                            scaffoldState.drawerState.open()
+                        }
+                    })
+                },
+                drawerContent = {
+                    DrawerHeader()
+                    DrawerBody(items = listOf(
+                        MenuItem(
+                            id = "logout",
+                            title = "Log Out",
+                            contentDescription = "Log Out Button",
+                            icon = Icons.Default.Logout
+                        )
+                    ), onItemClick = {
+                        if (it.id == "logout") {
+                            viewModel.signOut()
+                            navController.navigate(ScreenHolder.SigningScreen.route)
+                        }
+                    })
+                }
+
+            ) { paddingValues ->
+                BottomSheetScaffold(
+                    modifier = Modifier.padding(paddingValues),
+                    scaffoldState = bottomScaffoldState,
+                    sheetContent = {
+
+                        Column(
+                            modifier = Modifier,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "Choose an avatar", fontSize = 30.sp)
+                            LazyVerticalGrid(
