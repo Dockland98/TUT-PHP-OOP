@@ -261,3 +261,23 @@ fun AnalyzeRow(analyze: AnalyzeModel, modifier: Modifier = Modifier) {
 fun AnalyzeRowText(whatRow: String, modifier: Modifier) {
     Text(
         text = whatRow,
+        textAlign = TextAlign.Center,
+        modifier = modifier,
+        fontSize = 20.sp,
+        fontWeight = FontWeight.SemiBold,
+        fontStyle = FontStyle.Normal,
+    )
+}
+
+@Composable
+fun HeaderText(header: String, modifier: Modifier) {
+    Text(
+        text = header.trim(),
+        textAlign = TextAlign.Center,
+        modifier = modifier,
+        fontWeight = FontWeight.Bold,
+        fontStyle = FontStyle.Normal,
+        maxLines = 1,
+        style = MaterialTheme.typography.h5
+    )
+}
