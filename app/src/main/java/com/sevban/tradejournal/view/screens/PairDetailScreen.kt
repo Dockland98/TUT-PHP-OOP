@@ -104,3 +104,61 @@ fun PairDetailScreen(
                                 )
                                 sheetState.collapse()
                                 viewModel.save(analyze, currencyId)
+                            }
+                        },
+                        onEntryReasonChange = { entryReasonText = it },
+                        onNotesChange = { notesText = it },
+                        onResultChange = { resultText = it },
+                        onUrlChange = { urlState = it }
+                    )
+                },
+                sheetBackgroundColor = Color.LightGray,
+                sheetPeekHeight = 0.dp,
+            ) {
+                Surface(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(it)
+                ) {
+                    Column(
+                        modifier = Modifier.fillMaxSize(),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        HeaderText(header = pairName, modifier = Modifier)
+
+                        when (val listResponse = viewModel.analyzeListResponse) {
+
+                            is Resource.Loading -> CircularProgressIndicator()
+                            is Resource.Success -> LazyColumn {
+
+                                items(
+                                    items = listResponse.data!!,
+                                    key = { item: AnalyzeModel -> item.id }) { analyze ->
+                                    val dismissState = rememberDismissState(
+                                        confirmStateChange = { dismissValue ->
+                                            if (dismissValue == DismissValue.DismissedToStart) {
+                                                scope.launch {
+                                                    viewModel.deleteFromFirebase(
+                                                        analyze,
+                                                        listResponse.data,
+                                                        currencyId
+                                                    )
+                                                }
+                                            }
+                                            true
+                                        }
+                                    )
+                                    SwipeToDismiss(
+                                        state = dismissState,
+                                        directions = setOf(DismissDirection.EndToStart),
+                                        modifier = Modifier.animateItemPlacement(),
+                                        dismissThresholds = { direction ->
+                                            FractionalThreshold(0.55f)
+                                        },
+                                        background = {
+                                            val direction =
+                                                dismissState.direction
+                                            val color by animateColorAsState(
+                                                targetValue = when (dismissState.targetValue) {
+                                                    DismissValue.Default -> Color.LightGray
+                                                    DismissValue.DismissedToEnd -> Color.Transparent
