@@ -162,3 +162,49 @@ fun PairDetailScreen(
                                                 targetValue = when (dismissState.targetValue) {
                                                     DismissValue.Default -> Color.LightGray
                                                     DismissValue.DismissedToEnd -> Color.Transparent
+                                                    DismissValue.DismissedToStart -> Color.Red
+                                                }
+                                            )
+                                            val icon = Icons.Default.Delete
+
+                                            Box(
+                                                modifier = Modifier
+                                                    .fillParentMaxSize()
+                                                    .background(color = color),
+                                                contentAlignment = Alignment.CenterEnd
+                                            ) {
+                                                Icon(
+                                                    imageVector = icon,
+                                                    contentDescription = "Delete"
+                                                )
+                                            }
+                                        },
+                                        dismissContent = { AnalyzeRow(analyze = analyze) },
+                                    )
+                                }
+                            }
+                            is Resource.Error -> Text(text = "Liste verileri alınamadı.")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun AnalyzeRow(analyze: AnalyzeModel, modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background,
+        contentColor = contentColorFor(MaterialTheme.colors.onBackground)
+    ) {
+        Box(modifier = Modifier.fillMaxWidth()) {
+
+            Column(modifier = Modifier) {
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(5.dp)
+                        .border(BorderStroke(2.dp, color = MaterialTheme.colors.onBackground)),
