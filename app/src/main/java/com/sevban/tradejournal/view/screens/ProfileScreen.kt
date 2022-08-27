@@ -188,3 +188,69 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel = hi
                                 bitmap = ImageBitmap.imageResource(model.imageId),
                                 contentDescription = "User Avatar",
                                 modifier = Modifier
+                                    .padding(4.dp)
+                                    .weight(2f)
+                                    .size(150.dp)
+                                    .clip(RoundedCornerShape(24.dp))
+                                    .clickable {
+                                        scope.launch {
+
+                                            if (sheetState.isExpanded) {
+                                                sheetState.collapse()
+                                            } else {
+                                                sheetState.expand()
+                                            }
+                                        }
+                                    }
+                            )
+
+                            Box(
+                                modifier = Modifier
+                                    .weight(3f)
+                                    .align(Alignment.CenterVertically)
+                            ) {
+                                Column(modifier = Modifier.fillMaxWidth()) {
+                                    Text(
+                                        text = model.userName,
+                                        modifier = Modifier.padding(start = 35.dp)
+                                    )
+                                    Spacer(modifier = Modifier.padding(2.dp))
+                                    Text(
+                                        text = "Overall win rate: ",
+                                        modifier = Modifier.padding(start = 35.dp),
+                                        fontSize = 15.sp
+                                    )
+                                    Spacer(modifier = Modifier.padding(2.dp))
+                                    Text(
+                                        text = "Most traded: ",
+                                        modifier = Modifier.padding(start = 35.dp),
+                                        fontSize = 15.sp
+                                    )
+                                }
+                            }
+                        }
+
+
+                        Row(modifier = Modifier.fillMaxWidth()) {
+                            SearchBar(
+                                hint = "Search...", modifier = Modifier
+                                    .fillMaxWidth()
+                                    .weight(2f)
+                                    .padding(5.dp)
+                            ) { searchString ->
+                                viewModel.searchPairs(searchString)
+                            }
+                            Surface(
+                                color = MaterialTheme.colors.background,
+                                contentColor = contentColorFor(MaterialTheme.colors.onBackground)
+                            ) {
+                                Button(
+                                    onClick = {
+                                        openDialog = true
+                                    },
+                                    modifier = Modifier
+                                        .padding(4.dp)
+                                        .weight(1f),
+                                    border = BorderStroke(1.dp, MaterialTheme.colors.primary),
+                                    colors = ButtonDefaults.outlinedButtonColors(Color.White),
+                                    shape = CircleShape,
