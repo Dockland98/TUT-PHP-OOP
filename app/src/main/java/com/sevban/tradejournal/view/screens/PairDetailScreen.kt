@@ -208,3 +208,56 @@ fun AnalyzeRow(analyze: AnalyzeModel, modifier: Modifier = Modifier) {
                         .fillMaxWidth()
                         .padding(5.dp)
                         .border(BorderStroke(2.dp, color = MaterialTheme.colors.onBackground)),
+                    verticalAlignment = CenterVertically
+                ) {
+
+                    IconButton(onClick = { /*TODO*/ }, modifier = Modifier) {
+                        Icon(
+                            imageVector = Icons.Default.Edit,
+                            contentDescription = "Edit Analyze",
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.padding(horizontal = 50.dp))
+
+                    HeaderText(header = analyze.date.toString(), modifier = Modifier)
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    SubcomposeAsyncImage(
+                        model = ImageRequest.Builder(LocalContext.current)
+                            .data(analyze.tradingViewUrl)
+                            .crossfade(true)
+                            .build(),
+                        loading = { CircularProgressIndicator() },
+                        contentDescription = "Analyze",
+                        modifier = Modifier.padding(5.dp)
+                    )
+                }
+                AnalyzeRowText(
+                    whatRow = "Notes: " + analyze.notes,
+                    modifier = Modifier.padding(5.dp)
+                )
+
+                AnalyzeRowText(
+                    whatRow = "Reason: " + analyze.reason,
+                    modifier = Modifier.padding(5.dp)
+                )
+
+                AnalyzeRowText(
+                    whatRow = "Result: " + analyze.result,
+                    modifier = Modifier.padding(5.dp)
+                )
+            }
+        }
+    }
+}
+
+
+@Composable
+fun AnalyzeRowText(whatRow: String, modifier: Modifier) {
+    Text(
+        text = whatRow,
