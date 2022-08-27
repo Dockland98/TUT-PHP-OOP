@@ -133,3 +133,58 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel = hi
                         ) {
                             Text(text = "Choose an avatar", fontSize = 30.sp)
                             LazyVerticalGrid(
+                                modifier = Modifier
+                                    .height(500.dp)
+                                    .padding(16.dp),
+                                columns = GridCells.Adaptive(80.dp),
+                                content = {
+
+                                    items(traders) { i ->
+                                        Box(
+                                            modifier = Modifier
+                                                .padding(8.dp)
+                                                .aspectRatio(1f)
+                                                .clip(RoundedCornerShape(5.dp)),
+                                            contentAlignment = Alignment.Center
+
+                                        ) {
+                                            Image(
+                                                painterResource(id = i),
+                                                contentDescription = "Avatar",
+                                                Modifier
+                                                    .clickable {
+                                                        scope.launch {
+
+                                                            imageState = i
+                                                            viewModel.saveImageId(imageState)
+
+                                                        }
+                                                    }
+                                                    .border(
+                                                        BorderStroke(
+                                                            2.dp,
+                                                            color = MaterialTheme.colors.primary
+                                                        )
+                                                    )
+                                            )
+                                        }
+                                    }
+                                }
+                            )
+                        }
+                    },
+                    sheetBackgroundColor = Color.LightGray,
+                    sheetPeekHeight = 0.dp,
+                    sheetShape = RoundedCornerShape(30.dp)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .padding(it)
+                            .fillMaxWidth()
+                    ) {
+                        Row {
+
+                            Image(
+                                bitmap = ImageBitmap.imageResource(model.imageId),
+                                contentDescription = "User Avatar",
+                                modifier = Modifier
