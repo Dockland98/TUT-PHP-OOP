@@ -254,3 +254,55 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel = hi
                                     border = BorderStroke(1.dp, MaterialTheme.colors.primary),
                                     colors = ButtonDefaults.outlinedButtonColors(Color.White),
                                     shape = CircleShape,
+
+                                    ) {
+
+                                    Image(
+                                        imageVector = Icons.Default.Add,
+                                        contentDescription = "Add a pair",
+                                        modifier = Modifier.size(25.dp)
+                                    )
+
+                                    Text(text = "Add", Modifier.padding(start = 10.dp))
+                                }
+                            }
+
+
+                            var currencyName by remember { mutableStateOf("") }
+                            if (openDialog) {
+
+                                Surface(
+                                    color = MaterialTheme.colors.background,
+                                    contentColor = MaterialTheme.colors.onBackground
+                                ) {
+                                    Dialog(
+                                        onDismissRequest = { openDialog = false },
+                                        properties = DialogProperties(
+                                            dismissOnBackPress = false,
+                                            dismissOnClickOutside = true
+                                        ),
+                                    ) {
+                                        Surface(
+                                            color = MaterialTheme.colors.background,
+                                            contentColor = MaterialTheme.colors.onBackground
+                                        ) {
+                                            Box(modifier = Modifier) {
+                                                Column(modifier = Modifier.padding(11.dp)) {
+                                                    Text(
+                                                        text = "Add pair",
+                                                        fontSize = MaterialTheme.typography.h5.fontSize,
+                                                        fontWeight = Bold,
+                                                    )
+                                                    Spacer(modifier = Modifier.padding(top = 12.dp))
+                                                    Text(
+                                                        text = "Enter the pair you want to add",
+                                                        fontSize = MaterialTheme.typography.h6.fontSize,
+                                                        fontWeight = Normal,
+                                                    )
+
+                                                    TextField(
+                                                        modifier = Modifier
+                                                            .padding(22.dp)
+                                                            .border(
+                                                                BorderStroke(
+                                                                    2.dp,
