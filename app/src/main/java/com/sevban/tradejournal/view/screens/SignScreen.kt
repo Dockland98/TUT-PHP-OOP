@@ -65,3 +65,54 @@ fun SignScreen(
                 ) {
 
                 Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 220.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+
+
+                    EmailText(emailText) { emailText = it }
+
+                    Spacer(modifier = Modifier.padding(5.dp))
+
+                    PasswordText(passwordText) { passwordText = it }
+
+                    Spacer(modifier = Modifier.padding(20.dp))
+
+                    GeneralButton(
+                        onClicked = {
+                            viewModel.signIn(
+                                emailText,
+                                passwordText,
+                                context,
+                                navController
+                            )
+                        },
+                        text = "Sign In",
+                        navController = navController
+                    )
+                    Spacer(modifier = Modifier.padding(20.dp))
+
+                }
+
+                IconButton(
+                    onClick = {
+                        navController.navigate(ScreenHolder.SignUpScreen.route)
+                    },
+                    modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 256.dp)
+
+                ) {
+                    Row {
+                        Text(text = "Register")
+                        Icon(
+                            imageVector = Icons.Default.ArrowForward,
+                            contentDescription = "Register button"
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
