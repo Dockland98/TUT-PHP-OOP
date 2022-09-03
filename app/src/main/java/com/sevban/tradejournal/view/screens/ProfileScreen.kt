@@ -373,3 +373,54 @@ fun CurrencyRow(
     navController: NavController,
     viewModel: ProfileViewModel
 ) {
+    viewModel.countOfAnalyze(currency.id!!)
+    val currencyName = if (currency.currency != null) {
+        currency.currency!!.uppercase()
+    } else {
+        ""
+    }
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .border(BorderStroke(2.dp, MaterialTheme.colors.onBackground), RoundedCornerShape(2.dp))
+            .clickable {
+                val encodedUrl = URLEncoder
+                    .encode(currency.currency, StandardCharsets.UTF_8.toString())
+                    .uppercase()
+                navController.navigate("pair_detail_screen/${currency.id}/${encodedUrl}")
+            }
+    ) {
+        Text(
+            text = currencyName,
+            fontSize = 24.sp,
+            fontWeight = ExtraBold,
+            modifier = Modifier
+                .padding(16.dp)
+                .weight(3f)
+        )
+
+        Column(modifier = Modifier.weight(2f)) {
+            Text(
+                text = "Analysis : ${viewModel.pairCountMap[currency.id]?: 0}  ",
+                fontSize = 12.sp,
+                modifier = Modifier.padding(8.dp)
+            )
+            Text(
+                text = "Win rate : "/*TODO*/,
+                fontSize = 12.sp,
+                modifier = Modifier.padding(8.dp)
+            )
+        }
+    }
+    Spacer(modifier = Modifier.padding(4.dp))
+}
+
+@Composable
+fun Alert() {
+    var openDialog by remember { mutableStateOf(false) }
+    AlertDialog(
+        onDismissRequest = { openDialog = false },
+        title = { Text(text = "Add Pair", fontSize = 24.sp, color = Color.Black) },
+        text = { Text(text = "Enter the pair you want to add") },
+        confirmButton = {
