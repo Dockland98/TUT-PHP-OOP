@@ -306,3 +306,70 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel = hi
                                                             .border(
                                                                 BorderStroke(
                                                                     2.dp,
+                                                                    MaterialTheme.colors.primary
+                                                                ), RectangleShape
+                                                            ),
+                                                        value = currencyName,
+                                                        shape = RoundedCornerShape(6.dp),
+                                                        onValueChange = { currencyName = it },
+                                                        colors = TextFieldDefaults.textFieldColors(
+                                                            backgroundColor = Color.Transparent,
+                                                            focusedIndicatorColor = Color.Transparent,
+                                                            unfocusedIndicatorColor = Color.Transparent
+                                                        ),
+                                                        label = { Text(text = "Pair") },
+                                                        placeholder = { Text(text = "BTC/USD") }
+                                                    )
+
+                                                    Row(
+                                                        modifier = Modifier
+                                                            .padding(4.dp)
+                                                            .align(Alignment.CenterHorizontally)
+                                                    ) {
+                                                        TextButton(onClick = { openDialog = false }) {
+                                                            Text(text = "Cancel")
+
+                                                        }
+
+                                                        Spacer(modifier = Modifier.padding(horizontal = 16.dp))
+                                                        TextButton(
+                                                            colors = ButtonDefaults.buttonColors(
+                                                                backgroundColor = MaterialTheme.colors.primary
+                                                            ),
+                                                            shape = RoundedCornerShape(20.dp),
+                                                            onClick = {
+                                                                scope.launch {
+                                                                    viewModel.addPair(currencyName)
+                                                                }
+                                                                openDialog = false
+                                                            }) {
+
+                                                            Text(text = "Add")
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        LazyColumn(modifier = Modifier.padding(5.dp)) {
+                            items(pairList ,key = { item: PairListModel -> item.id!! }) { currency ->
+                                CurrencyRow(currency = currency, navController, viewModel)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun CurrencyRow(
+    currency: PairListModel,
+    navController: NavController,
+    viewModel: ProfileViewModel
+) {
