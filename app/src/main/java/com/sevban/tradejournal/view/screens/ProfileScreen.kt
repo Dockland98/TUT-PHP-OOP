@@ -424,3 +424,39 @@ fun Alert() {
         title = { Text(text = "Add Pair", fontSize = 24.sp, color = Color.Black) },
         text = { Text(text = "Enter the pair you want to add") },
         confirmButton = {
+            TextButton(onClick = {
+                openDialog = false
+            }) {
+                Text(text = "Add")
+
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = { openDialog = false }) {
+                Text(text = "Cancel")
+            }
+        }
+
+    )
+}
+
+@Composable
+fun OutlinedIconButton(modifier: Modifier, onClick: () -> Unit, buttonText: String) {
+    Button(
+        onClick = onClick,
+        modifier = modifier,
+        border = BorderStroke(1.dp, MaterialTheme.colors.primary),
+        colors = ButtonDefaults.outlinedButtonColors(Color.White),
+        shape = CircleShape,
+
+        ) {
+
+        Image(
+            imageVector = Icons.Default.Add,
+            contentDescription = "Add a pair",
+            modifier = Modifier.size(25.dp)
+        )
+
+        Text(text = buttonText, Modifier.padding(start = 10.dp))
+    }
+}
