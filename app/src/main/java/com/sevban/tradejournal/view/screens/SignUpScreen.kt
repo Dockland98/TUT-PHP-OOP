@@ -10,4 +10,5 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.sevban.tradejournal.model.User
-import com.se
+import com.sevban.tradejournal.view.components.Signing.EmailText
+import com
