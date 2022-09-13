@@ -12,4 +12,4 @@ import androidx.navigation.NavController
 import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.view.components.Signing.EmailText
 import com.sevban.tradejournal.view.components.Signing.LessFocusedButton
-import 
+import com.sevban.tradejournal.view.components.Signing.Pass
