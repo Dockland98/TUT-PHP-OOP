@@ -13,4 +13,7 @@ import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.view.components.Signing.EmailText
 import com.sevban.tradejournal.view.components.Signing.LessFocusedButton
 import com.sevban.tradejournal.view.components.Signing.PasswordText
-import com.sevban.tradejournal.viewmode
+import com.sevban.tradejournal.viewmodel.SignUpViewModel
+
+@Composable
+fun SignUpScreen(viewModel:
