@@ -16,4 +16,6 @@ import com.sevban.tradejournal.view.components.Signing.PasswordText
 import com.sevban.tradejournal.viewmodel.SignUpViewModel
 
 @Composable
-fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController
+fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavController,context: Context) {
+
+    var emailText
