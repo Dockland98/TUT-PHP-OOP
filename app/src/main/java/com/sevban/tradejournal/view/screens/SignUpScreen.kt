@@ -16,4 +16,4 @@ import com.sevban.tradejournal.view.components.Signing.PasswordText
 import com.sevban.tradejournal.viewmodel.SignUpViewModel
 
 @Composable
-fun SignUpScreen(viewModel:
+fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController
