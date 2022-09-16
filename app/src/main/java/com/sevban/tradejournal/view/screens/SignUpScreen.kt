@@ -20,4 +20,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
 
     var emailText by remember{ mutableStateOf("") }
     var passwordText by remember{ mutableStateOf("") }
-    var u
+    var userNameText by remember{ mutableStateOf("")}
+    val u
