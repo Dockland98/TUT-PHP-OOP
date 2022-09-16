@@ -21,4 +21,6 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
     var emailText by remember{ mutableStateOf("") }
     var passwordText by remember{ mutableStateOf("") }
     var userNameText by remember{ mutableStateOf("")}
-    val u
+    val user = User(emailText,passwordText,userNameText,"")
+
+    Surf
