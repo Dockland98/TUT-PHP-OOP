@@ -19,4 +19,5 @@ import com.sevban.tradejournal.viewmodel.SignUpViewModel
 fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavController,context: Context) {
 
     var emailText by remember{ mutableStateOf("") }
-    va
+    var passwordText by remember{ mutableStateOf("") }
+    var u
