@@ -18,4 +18,5 @@ import com.sevban.tradejournal.viewmodel.SignUpViewModel
 @Composable
 fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavController,context: Context) {
 
-    var emailText
+    var emailText by remember{ mutableStateOf("") }
+    va
