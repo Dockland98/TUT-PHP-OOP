@@ -23,4 +23,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
     var userNameText by remember{ mutableStateOf("")}
     val user = User(emailText,passwordText,userNameText,"")
 
-    Surf
+    Surface(
+        modifier = Modifier.fillMaxSize
