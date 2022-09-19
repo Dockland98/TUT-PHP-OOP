@@ -24,4 +24,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
     val user = User(emailText,passwordText,userNameText,"")
 
     Surface(
-        modifier = Modifier.fillMaxSize
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.backgro
