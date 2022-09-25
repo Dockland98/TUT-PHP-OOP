@@ -25,4 +25,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colors.backgro
+        color = MaterialTheme.colors.background,
+        contentColor = contentColorFor(MaterialT
