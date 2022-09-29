@@ -33,4 +33,6 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
             .padding(top = 5.dp)
         ){
 
-    
+            Column(
+                modifier = Modifier
+   
