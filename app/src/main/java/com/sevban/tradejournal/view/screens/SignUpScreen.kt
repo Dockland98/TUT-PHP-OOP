@@ -30,4 +30,7 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
     ){
         Box(modifier = Modifier
             .fillMaxSize()
-  
+            .padding(top = 5.dp)
+        ){
+
+    
