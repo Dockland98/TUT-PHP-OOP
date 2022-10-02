@@ -36,4 +36,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(to
+                    .padding(top = 220.dp),
+                horizontalAlignment = Al
