@@ -39,3 +39,6 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     .padding(top = 220.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+
+                OutlinedTextField(
+                    v
