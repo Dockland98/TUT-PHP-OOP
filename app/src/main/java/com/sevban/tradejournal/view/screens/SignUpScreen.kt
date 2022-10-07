@@ -46,4 +46,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     onValueChange = {
                         userNameText=it
                         user.userName=it },
-                    colors
+                    colors = TextFieldDefaults
+                     
