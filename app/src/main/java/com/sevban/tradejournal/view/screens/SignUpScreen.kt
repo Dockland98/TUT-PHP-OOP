@@ -42,4 +42,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
 
                 OutlinedTextField(
                     value =userNameText,
-                    label = { T
+                    label = { Text(text = "Username")},
+                    onValueChange
