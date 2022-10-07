@@ -45,4 +45,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     label = { Text(text = "Username")},
                     onValueChange = {
                         userNameText=it
-               
+                        user.userName=it },
+                    colors
