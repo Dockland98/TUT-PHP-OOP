@@ -52,4 +52,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                             backgroundColor = MaterialTheme.colors.background
                         )
 
-       
+                    )
+                Spacer(modifier = Modifier.padding(
