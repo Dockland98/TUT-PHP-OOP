@@ -55,4 +55,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     )
                 Spacer(modifier = Modifier.padding(5.dp))
                 EmailText(emailText){
-      
+                    emailText=it
+                   
