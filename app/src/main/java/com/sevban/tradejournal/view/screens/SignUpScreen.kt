@@ -59,4 +59,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     user.email=it
 
                 }
-                Spacer(modi
+                Spacer(modifier = Modifier.padding(5.dp))
+           
