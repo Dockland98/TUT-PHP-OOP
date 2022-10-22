@@ -64,4 +64,7 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                     passwordText=it
                     user.password=it
                 }
-                Spacer(modifier = Modifier.paddi
+                Spacer(modifier = Modifier.padding(20.dp))
+
+                LessFocusedButton(
+            
