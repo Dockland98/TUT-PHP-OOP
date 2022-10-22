@@ -63,4 +63,5 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                 PasswordText(passwordText){
                     passwordText=it
                     user.password=it
-             
+                }
+                Spacer(modifier = Modifier.paddi
