@@ -55,3 +55,55 @@ class ProfileViewModel @Inject constructor(
 
             }
         } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+    }
+
+    fun searchPairs(query: String) {
+
+        val listToSearch = if(isSearchStarting) {
+            pairListResponse
+        } else {
+            initialList
+        }
+        viewModelScope.launch(Dispatchers.Default) {
+            if(query.isEmpty()) {
+                pairListResponse = initialList
+                isSearchStarting = true
+                return@launch
+            }
+            val results = listToSearch.filter {
+                it.currency!!.contains(query.trim(), ignoreCase = true)
+            }
+            if(isSearchStarting) {
+                initialList = pairListResponse
+                isSearchStarting = false
+            }
+            pairListResponse = results
+        }
+    }
+
+    fun saveImageId(imageState: Int) = CoroutineScope(Dispatchers.IO).launch {
+        profileRepository.saveImageId(imageState)
+    }
+
+    fun getUserModel() = viewModelScope.launch {
+        profileRepository.getUserModel(modelState)
+    }
+
+    fun signOut()= viewModelScope.launch {
+        FirebaseAuth.getInstance().signOut()
+    }
+
+    fun addPair(newPair: String) = viewModelScope.launch {
+        profileRepository.addPair(newPair)
+    }
+
+    fun getPairList() = viewModelScope.launch {
+        profileRepository.getPairListFromFirestore().collect { response ->
+            when (response) {
+                is Resource.Success -> {
+                    isLoading = false
+                    pairListResponse = response.data!!
+                }
