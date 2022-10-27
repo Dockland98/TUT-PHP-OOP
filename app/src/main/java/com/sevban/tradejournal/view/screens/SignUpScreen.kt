@@ -69,4 +69,9 @@ fun SignUpScreen(viewModel: SignUpViewModel= hiltViewModel(),navController: NavC
                 LessFocusedButton(
                     onClicked = { viewModel.createUser(user,navController) },
                     text ="Register" ,
-                    navController = navControll
+                    navController = navController
+                )
+            }
+        }
+    }
+}
