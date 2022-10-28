@@ -107,3 +107,19 @@ class ProfileViewModel @Inject constructor(
                     isLoading = false
                     pairListResponse = response.data!!
                 }
+                is Resource.Error -> {
+                    isLoading = false
+                    return@collect
+                }
+                is Resource.Loading -> {
+                    isLoading = true
+                }
+            }
+        }
+    }
+
+    fun searchPair() {
+        profileRepository.searchPair()
+    }
+
+}
