@@ -9,4 +9,5 @@ import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.repo.SignUpRepoInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.cor
+import kotlinx.coroutines.launch
+import javax.inject.Inject
