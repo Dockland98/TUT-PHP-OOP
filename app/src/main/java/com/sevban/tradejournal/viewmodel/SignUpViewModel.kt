@@ -8,3 +8,5 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.sevban.tradejournal.model.User
 import com.sevban.tradejournal.repo.SignUpRepoInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.cor
