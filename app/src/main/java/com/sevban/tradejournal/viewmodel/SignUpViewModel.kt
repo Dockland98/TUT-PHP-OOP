@@ -4,4 +4,5 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore
+import com.google.firebase.firestore.FirebaseFirestore
+import com.sevban.tradejournal.m
