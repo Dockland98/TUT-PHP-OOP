@@ -1,1 +1,3 @@
-package com.sevban.t
+package com.sevban.tradejournal.viewmodel
+
+import androidx.lifecycle.V
