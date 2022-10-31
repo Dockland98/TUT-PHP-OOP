@@ -17,4 +17,5 @@ import javax.inject.Inject
 class SignUpViewModel @Inject constructor(
     private val database: FirebaseFirestore,
     private val auth: FirebaseAuth,
-    private va
+    private val signUpRepository: SignUpRepoInterface
+) :
