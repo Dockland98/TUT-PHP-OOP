@@ -15,3 +15,4 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SignUpViewModel @Inject constructor(
+    private val database: FirebaseFirestore,
