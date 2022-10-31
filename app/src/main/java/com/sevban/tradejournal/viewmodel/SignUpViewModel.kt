@@ -20,4 +20,5 @@ class SignUpViewModel @Inject constructor(
     private val signUpRepository: SignUpRepoInterface
 ) : ViewModel() {
 
-    fun createUser(user: User, navC
+    fun createUser(user: User, navController: NavController) =
+        viewModelScope.lau
