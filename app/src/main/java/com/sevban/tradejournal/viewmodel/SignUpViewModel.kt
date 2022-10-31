@@ -18,4 +18,6 @@ class SignUpViewModel @Inject constructor(
     private val database: FirebaseFirestore,
     private val auth: FirebaseAuth,
     private val signUpRepository: SignUpRepoInterface
-) :
+) : ViewModel() {
+
+    fun createUser(user: User, navC
