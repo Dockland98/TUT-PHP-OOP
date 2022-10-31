@@ -21,4 +21,5 @@ class SignUpViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun createUser(user: User, navController: NavController) =
-        viewModelScope.lau
+        viewModelScope.launch(Dispatchers.IO) {
+            signUpRepository.cr
