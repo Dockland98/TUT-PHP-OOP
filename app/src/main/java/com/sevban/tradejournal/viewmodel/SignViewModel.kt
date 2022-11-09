@@ -5,4 +5,5 @@ import android.widget.Toast
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import and
+import androidx.navigation.NavController
+import com.google.firebase.aut
