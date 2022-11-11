@@ -6,4 +6,5 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.google.firebase.aut
+import com.google.firebase.auth.FirebaseAuth
+import com.sevban.tradejournal.uti
