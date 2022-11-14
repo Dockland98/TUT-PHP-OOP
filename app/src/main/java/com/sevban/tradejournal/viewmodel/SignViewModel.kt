@@ -22,4 +22,6 @@ class SignViewModel @Inject constructor(
 ) : ViewModel() {
     var isLoading = mutableStateOf(true)
 
-    fun s
+    fun signIn(
+        email: String?,
+        passwo
