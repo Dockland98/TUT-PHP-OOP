@@ -17,4 +17,6 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
-class SignViewModel @Inje
+class SignViewModel @Inject constructor(
+    private val auth: FirebaseAuth
+) : ViewMo
