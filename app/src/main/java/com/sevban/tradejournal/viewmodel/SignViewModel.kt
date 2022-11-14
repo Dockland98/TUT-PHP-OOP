@@ -19,4 +19,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignViewModel @Inject constructor(
     private val auth: FirebaseAuth
-) : ViewMo
+) : ViewModel() {
+    var isLoading = mutableStateOf(true)
+
+    fun s
