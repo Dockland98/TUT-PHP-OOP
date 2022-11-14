@@ -7,4 +7,5 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
-import com.sevban.tradejournal.uti
+import com.sevban.tradejournal.util.Resource
+import com.sevban.tradejournal.view.scre
