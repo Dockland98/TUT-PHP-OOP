@@ -8,4 +8,5 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
 import com.sevban.tradejournal.util.Resource
-import com.sevban.tradejournal.view.scre
+import com.sevban.tradejournal.view.screens.ScreenHolder
+import dagger.hilt.android.li
