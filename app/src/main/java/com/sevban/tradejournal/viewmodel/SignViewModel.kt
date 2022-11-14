@@ -9,4 +9,6 @@ import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
 import com.sevban.tradejournal.util.Resource
 import com.sevban.tradejournal.view.screens.ScreenHolder
-import dagger.hilt.android.li
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+impo
