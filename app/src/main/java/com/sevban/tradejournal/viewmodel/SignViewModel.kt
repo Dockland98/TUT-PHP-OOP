@@ -24,4 +24,6 @@ class SignViewModel @Inject constructor(
 
     fun signIn(
         email: String?,
-        passwo
+        password: String?,
+        context: Context,
+        navContro
