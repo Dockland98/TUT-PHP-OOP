@@ -26,4 +26,5 @@ class SignViewModel @Inject constructor(
         email: String?,
         password: String?,
         context: Context,
-        navContro
+        navController: NavController
+    ) = viewModelScope.launch(Dispatc
