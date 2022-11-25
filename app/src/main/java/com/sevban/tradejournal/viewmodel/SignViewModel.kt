@@ -29,4 +29,4 @@ class SignViewModel @Inject constructor(
         navController: NavController
     ) = viewModelScope.launch(Dispatchers.IO) {
 
-        if (email != null && email.isNotBlank() 
+        if (email != null && email.isNotBlank() && password != null && password.isNotBlank()
