@@ -32,4 +32,5 @@ class SignViewModel @Inject constructor(
         if (email != null && email.isNotBlank() && password != null && password.isNotBlank()) {
 
             try {
-                auth.sig
+                auth.signInWithEmailAndPassword(email, password).await()
+            
