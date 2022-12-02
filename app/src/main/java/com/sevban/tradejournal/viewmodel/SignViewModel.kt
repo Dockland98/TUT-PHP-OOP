@@ -33,4 +33,6 @@ class SignViewModel @Inject constructor(
 
             try {
                 auth.signInWithEmailAndPassword(email, password).await()
-            
+                withContext(Dispatchers.Main) {
+
+                    navContr
