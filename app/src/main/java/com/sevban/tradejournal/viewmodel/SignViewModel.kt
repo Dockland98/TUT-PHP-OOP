@@ -36,4 +36,5 @@ class SignViewModel @Inject constructor(
                 withContext(Dispatchers.Main) {
 
                     navController.navigate(ScreenHolder.ProfileScreen.route) {
-                        popUpTo(ScreenHolder.SigningScre
+                        popUpTo(ScreenHolder.SigningScreen.route) {
+                            inclusive = t
