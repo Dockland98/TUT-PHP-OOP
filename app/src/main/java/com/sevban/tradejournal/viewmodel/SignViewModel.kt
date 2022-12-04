@@ -35,4 +35,4 @@ class SignViewModel @Inject constructor(
                 auth.signInWithEmailAndPassword(email, password).await()
                 withContext(Dispatchers.Main) {
 
-                    navContr
+                    navController.navigate(ScreenHolder.ProfileScreen
