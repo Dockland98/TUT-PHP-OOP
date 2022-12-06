@@ -40,4 +40,5 @@ class SignViewModel @Inject constructor(
                             inclusive = true
                         }
                     }
-    
+                }
+            } catch (e: Exception)
