@@ -41,4 +41,6 @@ class SignViewModel @Inject constructor(
                         }
                     }
                 }
-            } catch (e: Exception)
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+           
