@@ -43,4 +43,7 @@ class SignViewModel @Inject constructor(
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, e.localizedMessage, Toast.L
+                    Toast.makeText(context, e.localizedMessage, Toast.LENGTH_LONG).show()
+                }
+            }
+
