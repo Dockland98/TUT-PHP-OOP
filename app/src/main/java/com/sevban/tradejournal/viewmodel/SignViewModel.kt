@@ -52,4 +52,5 @@ class SignViewModel @Inject constructor(
                 Toast.makeText(
                     context,
                     "Lütfen email ve şifre alanlarını boş bırakmayınız.",
-  
+                    Toast.LENGTH_LONG
+            
