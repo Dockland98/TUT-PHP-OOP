@@ -53,4 +53,9 @@ class SignViewModel @Inject constructor(
                     context,
                     "Lütfen email ve şifre alanlarını boş bırakmayınız.",
                     Toast.LENGTH_LONG
-            
+                ).show()
+            }
+        }
+    }
+
+    fun currentUserChe
