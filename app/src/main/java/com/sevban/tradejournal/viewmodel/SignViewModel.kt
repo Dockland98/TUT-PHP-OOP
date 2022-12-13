@@ -60,4 +60,6 @@ class SignViewModel @Inject constructor(
 
     fun currentUserCheck() : Resource<Boolean> {
 
-        if (auth.currentUser != n
+        if (auth.currentUser != null) {
+            isLoading.value = false
+     
