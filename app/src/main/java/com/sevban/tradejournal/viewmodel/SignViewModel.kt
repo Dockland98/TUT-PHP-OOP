@@ -62,4 +62,6 @@ class SignViewModel @Inject constructor(
 
         if (auth.currentUser != null) {
             isLoading.value = false
-     
+            return Resource.Success(true)
+        }
+        el
