@@ -64,4 +64,6 @@ class SignViewModel @Inject constructor(
             isLoading.value = false
             return Resource.Success(true)
         }
-        el
+        else {
+            isLoading.value = false
+    
