@@ -72,4 +72,4 @@ class SignViewModel @Inject constructor(
 
 
 
-    //Databaseden kullanıcı silince aynı zamanda Authent
+    //Databaseden kullanıcı silince aynı zamanda Authenticationdan da silinmiş olmuyor.Bunu kontrol et ve s
