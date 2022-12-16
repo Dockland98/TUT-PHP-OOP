@@ -72,4 +72,6 @@ class SignViewModel @Inject constructor(
 
 
 
-    //Databaseden kullanıcı silince aynı zamanda Authenticationdan da silinmiş olmuyor.Bunu kontrol et ve s
+    //Databaseden kullanıcı silince aynı zamanda Authenticationdan da silinmiş olmuyor.Bunu kontrol et ve silinmesini sağla.
+    /*TODO()*/
+    //Kullanıcı
