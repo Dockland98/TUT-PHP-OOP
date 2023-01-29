@@ -2,4 +2,5 @@
    Sample backup rules file; uncomment and customize as necessary.
    See https://developer.android.com/guide/topics/data/autobackup
    for details.
-   Note: This file is ignored for d
+   Note: This file is ignored for devices older that API 31
+   See htt
