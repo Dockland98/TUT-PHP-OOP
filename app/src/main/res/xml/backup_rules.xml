@@ -3,4 +3,8 @@
    See https://developer.android.com/guide/topics/data/autobackup
    for details.
    Note: This file is ignored for devices older that API 31
-   See https://developer.android.com/about/versions/12/backup
+   See https://developer.android.com/about/versions/12/backup-restore
+-->
+<full-backup-content>
+    <!--
+   <i
