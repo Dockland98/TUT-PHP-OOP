@@ -3,4 +3,7 @@ buildscript {
         compose_version = '1.2.0-beta03'
     }
     repositories {
-        goog
+        google()
+        mavenCentral()
+    }
+    depend
