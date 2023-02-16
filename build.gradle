@@ -6,4 +6,5 @@ buildscript {
         google()
         mavenCentral()
     }
-    depend
+    dependencies {
+        classpath 'com.android.tools.build:g
