@@ -22,4 +22,5 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
 }
 
-tas
+task clean(type: Delete) {
+    delete rootProject.bu
